@@ -1,0 +1,54 @@
+# Buildozer configuration file
+# For use with Buildozer (to create APK without passwords)
+
+# (str) Application name
+name: ZezoAI
+
+# (str) Package name
+package_name: zezoai
+
+# (str) Package domain (used for Android namespace)
+package_domain: org.zezoai
+
+# (str) Application version
+version: 1.0.0
+
+# (int) Application version code (must be an integer)
+version_code: 1
+
+# (str) The directory containing the app's source code.
+# Specify the source directory if it's different from the current one
+# source.include_exts = py,png,jpg,kv,atlas
+# If your project directory is in a specific folder, you can set its path here
+source.include_exts = py,png,jpg,kv,atlas
+
+# (list) Application requirements
+requirements = python3,kivy,pyttsx3,speechrecognition,wikipedia,openai,kivymd
+
+# (bool) Enable or disable the splash screen (True = enabled)
+splashscreen = 0
+
+# (bool) Whether to package your app for Google Play
+# If False, it builds unsigned APK
+android.release = 0
+
+# (bool) Whether to generate an APK without signing (for debug APK)
+android.debug = 1
+
+# (str) The Android architecture you want to target
+android.arch = armeabi-v7a
+
+# (str) Android SDK version (can be "stable" or a specific version like "4.0.1")
+android.sdk_version = 28
+
+# (str) Android NDK version (can be "stable" or a specific version)
+android.ndk_version = 19b
+
+# (str) Directory for the Android SDK (if custom path)
+# If you have a custom Android SDK or NDK path, set it here
+android.sdk_path = /path/to/your/android/sdk
+android.ndk_path = /path/to/your/android/ndk
+
+# (str) The directory containing the Android source
+# If you are using custom Android source code, you can specify its path here
+# android.source_dir = /path/to/your/android/source
