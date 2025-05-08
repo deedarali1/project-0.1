@@ -1,0 +1,33 @@
+# project.kv
+
+BoxLayout:
+    orientation: "vertical"
+
+    # Chat Area (Scroll View)
+    ScrollView:
+        size_hint: 1, None
+        height: "400dp"
+        MDList:
+            id: chat_area
+
+    # Text Input Field
+    MDTextField:
+        id: text_input
+        hint_text: "Say something..."
+        size_hint_y: None
+        height: "50dp"
+        on_text_validate: app.on_enter(self)
+
+    # Send Button
+    MDRaisedButton:
+        text: "Send"
+        size_hint_y: None
+        height: "50dp"
+        on_release: app.on_send(self)
+        
+    # Placeholder for Voice Input Button (optional)
+    MDRaisedButton:
+        text: "Listen"
+        size_hint_y: None
+        height: "50dp"
+        on_release: app.start_listening()
